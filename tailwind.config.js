@@ -4,8 +4,7 @@ module.exports = {
   theme: {
     colors: {
       wed: "#D2D2C6",
-      asari: "#6D695D",
-      niku: "#66cdaa ",
+      text: "#00afcc",
     },
     extend: {},
   },

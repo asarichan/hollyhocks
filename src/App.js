@@ -1,27 +1,29 @@
-import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header text-wed">
-        <img
-          src={
-            "https://4.bp.blogspot.com/-6nucQQvGF7M/WzC-BHQmAHI/AAAAAAABM90/mCILacrOAq8IqccOnH1U_umcAD56flJnQCLcBGAs/s800/yaruki_moeru_man.png"
-          }
-          className="App-logo"
-          alt="logo"
-        />
-        <p className="text-asari">
-          <code>WED</code>コミュニティにようこそ！
-        </p>
-        <a
-          className="text-niku"
-          href="https://wed.company/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn WED
+      <header className="App-title">
+        Artem
+        <header className="App-subtitle">
+          -教科書をリサイクルできるWebアプリ-
+        </header>
+      </header>
+
+      <header className="App-header">
+        <h1> Artem </h1>
+        <div className="space">教科書を</div>
+
+        <a className="text" href="https://wed.company/">
+          <p>欲しい学生にあげる</p>
+        </a>
+
+        <a className="text" href="https://wed.company/">
+          <p>先輩からもらう</p>
+        </a>
+
+        <a className="text" href="https://wed.company/">
+          <p>もらわれたか確認する</p>
         </a>
       </header>
     </div>
