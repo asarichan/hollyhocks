@@ -1,4 +1,5 @@
 import "./App.css";
+import "./test.js";
 
 function App() {
   return (
@@ -26,7 +27,7 @@ function App() {
           <p>もらわれたか確認する</p>
         </a>
 
-        <a className="text" href="test.js">
+        <a className="text" href="./test.js">
           <p>test</p>
         </a>
       </header>
