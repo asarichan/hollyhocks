@@ -1,0 +1,29 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  background-color: lightskyblue;
+  color: white;
+  font-size: 15px;
+  position: relative;
+  top: 220px;
+}
+
+.example{
+  background-color: orange;
+  color: white;
+  position: relative;
+  right: 70px;
+  padding: 10px 20px;
+}
+.example1{
+  background-color: gray;
+  color: white;
+  position: relative;
+  left: 70px;
+  padding: 10px 20px;
+}
+.gorira{
+  background-color: rgb(54, 167, 54);
+  width: 500px;
+  margin: 10px auto;
+}
