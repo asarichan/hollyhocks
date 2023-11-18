@@ -25,6 +25,8 @@ function App() {
         <a className="text" href="https://wed.company/">
           <p>もらわれたか確認する</p>
         </a>
+
+        <p>test</p>
       </header>
     </div>
   );
