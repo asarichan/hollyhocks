@@ -1,0 +1,13 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  background-color: lightskyblue;
+  color: white;
+  position: relative;
+  top: 220px;
+}
+.ua {
+  background-color: orange;
+  width: 500px;
+  margin: 10px auto;
+}
