@@ -26,7 +26,9 @@ function App() {
           <p>もらわれたか確認する</p>
         </a>
 
-        <p>test</p>
+        <a className="text" href="test.js">
+          <p>test</p>
+        </a>
       </header>
     </div>
   );
