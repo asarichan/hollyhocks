@@ -12,6 +12,14 @@
   background-color: white;
 }
 
+.App-ContentTitle {
+  text-align: left;
+  font-size: 64px;
+  font-weight: bold;
+  padding: 5px;
+  color: white;
+  background-color: #25b7c0;;
+}
 .App-subtitle {
   font-size: 24px;
   font-weight: bold;
@@ -34,7 +42,7 @@
   color: white;
 }
 
-.App-ReceiveBook {
+.App-content {
   color: black;
 }
 
@@ -56,7 +64,7 @@ a {
   line-height: 100px;
 }
 
-a.btn_02 {
+button.btn_02 {
 	display: block;
 	text-align: center;
 	vertical-align: middle;
@@ -69,10 +77,10 @@ a.btn_02 {
 	border: 2px solid #f3981d;
 	background: orange;
 	color: white;
-	transition: 0.5s;
 }
 
-a.btn_02:hover {
+button.btn_02:hover {
 	color: white;
 	background: #d2691e;
+  transition: 0.5s;
 }
