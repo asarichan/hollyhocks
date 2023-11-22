@@ -34,6 +34,10 @@
   color: white;
 }
 
+.App-ReceiveBook {
+  color: black;
+}
+
 h1 {
   color: white;
   font-size: 48px;
@@ -50,4 +54,25 @@ a {
 
 .space {
   line-height: 100px;
+}
+
+a.btn_02 {
+	display: block;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+  border-radius: 20px;
+	width: 150px;
+	margin: auto;
+	padding: 1rem;
+	font-weight: bold;
+	border: 2px solid #f3981d;
+	background: orange;
+	color: white;
+	transition: 0.5s;
+}
+
+a.btn_02:hover {
+	color: white;
+	background: #d2691e;
 }
