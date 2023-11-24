@@ -2,7 +2,6 @@
 
 // import "./styles.css";
 
-
 export default function App() {
   return (
     <div className="App">
@@ -17,6 +16,9 @@ export default function App() {
         src="https://m.media-amazon.com/images/I/31pu-L3RKEL._SY445_SX342_.jpg"
         alt="教科書の写真"
       />
+
+      <input type="file" name="sample" accept="image/jpeg, image/png" />
+
       <h2>場所</h2>
       <ul>
         <li>食堂前</li>

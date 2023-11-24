@@ -7,7 +7,7 @@ import DecideData from "./DecideDate";
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="exhibit" element={<ExhibitBook />} />

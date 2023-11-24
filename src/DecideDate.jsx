@@ -23,6 +23,7 @@ function ConfirmTransaction() {
   if (window.confirm("取引を確定させますか？")) {
     document.write("取引が成立しましたページに飛ぶ");
   } else {
+    return;
   }
 }
 
@@ -31,13 +32,17 @@ export default function DecideRecieve() {
     const inputDate = document.getElementById("dateInput").value;
     const currentDate = new Date(inputDate);
 
-    // 最小日付と最大日付の設定（例として、2023年1月1日から2024年1月1日）
     const minDate = new Date();
     const maxDate = new Date();
     maxDate.setDate(today.getDate() + 7);
 
+    if (!inputDate) {
+      alert("日付が設定されていません！");
+      return;
+    }
+
     if (currentDate < minDate || currentDate > maxDate) {
-      alert("正しい日付を選択してください。");
+      alert("正しい日付を選択してください！");
     } else {
       if (window.confirm("この日付でよろしいですね?")) {
         ConfirmTransaction();
@@ -53,18 +58,45 @@ export default function DecideRecieve() {
         <div className="App-ContentTitle">日時を決める</div>
       </div>
 
-      <div className="App-content">
-        <p>出品者の名前：{user}</p>
-        <p>本の名前：{book}</p>
-        <p>受取場所：{place}</p>
-        <p>科目タグ：{tag}</p>
+      <div>
+        <p>＜取引内容確認＞</p>
       </div>
+
+      <table class="form-table">
+        <tbody>
+          <tr>
+            <th>氏名</th>
+            <td>{user}</td>
+          </tr>
+
+          <tr>
+            <th>本の名前</th>
+            <td>{book}</td>
+          </tr>
+
+          <tr>
+            <th>受取場所</th>
+            <td>{place}</td>
+          </tr>
+
+          <tr>
+            <th>科目タグ</th>
+            <td>{tag}</td>
+          </tr>
+        </tbody>
+      </table>
 
       <p>
         <div>
-          <label htmlFor="dateInput">日付を選択してください:</label>
-          <input type="date" id="dateInput" />
-
+          <div className="h1-black">
+            <label htmlFor="dateInput">日付を選択してください</label>
+          </div>
+          {year}年{month}月{begin}日～{year}年{month}月{end}まで有効です
+          <div className="h1-black">
+            <p>
+              <input type="date" id="dateInput" />
+            </p>
+          </div>
           <button className="btn_02" type="button" onClick={handleButtonClick}>
             取引を確定する
           </button>
