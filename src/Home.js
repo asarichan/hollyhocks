@@ -1,24 +1,36 @@
-<header className="App-title">
-Artem
-<header className="App-subtitle">
-  -教科書をリサイクルできるWebアプリ-
-</header>
-</header>
+import { Link } from "react-router-dom";
+import "./App.css";
 
-<header className="App-header">
-<h1> Artem </h1>
-<div className="space">教科書を</div>
+function Home() {
+  return (
+    <div className="App">
+      <header className="App-title">
+        Artem
+        <header className="App-subtitle">
+          -教科書をリサイクルできるWebアプリ-
+        </header>
+      </header>
 
-<a className="text" href="https://wed.company/">
-  <p>欲しい学生にあげる</p>
-</a>
+      <main className="App-header">
+        <h1> Artem </h1>
+        <div className="space">教科書を</div>
 
-<a className="text" href="https://wed.company/">
-  <p>先輩からもらう</p>
-</a>
+        <Link to="exhibit" className="text">
+          <p>欲しい学生にあげる</p>
+        </Link>
 
-<a className="text" href="https://wed.company/">
-  <p>もらわれたか確認する</p>
-</a>
-</header>
-</div>
+        <Link to="receive" className="text">
+          <p>先輩からもらう</p>
+        </Link>
+
+        <p>もらわれたか確認する</p>
+
+        <Link to="add" clasName="text">
+          <p>画面確認用</p>
+        </Link>
+      </main>
+    </div>
+  );
+}
+
+export default Home;
