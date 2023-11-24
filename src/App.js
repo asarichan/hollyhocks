@@ -1,6 +1,5 @@
 import "./App.css";
 
-
 function App() {
   return (
     <div className="App">
@@ -25,10 +24,6 @@ function App() {
 
         <a className="text" href="https://wed.company/">
           <p>もらわれたか確認する</p>
-        </a>
-
-        <a className="text" href="./test.js">
-          <p>test</p>
         </a>
       </header>
     </div>
