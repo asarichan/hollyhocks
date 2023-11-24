@@ -1,6 +1,6 @@
 //出品画面
 
-import "./styles.css";
+// import "./styles.css";
 
 
 export default function App() {
