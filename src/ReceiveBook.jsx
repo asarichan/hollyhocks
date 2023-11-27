@@ -10,7 +10,6 @@ const explain = "この本でJAVAの全てが理解できます";
 
 function DecideDate() {
   if (window.confirm("日付を決めますか？")) {
-
   }
 }
 
@@ -57,16 +56,9 @@ export default function ReceiveBook() {
             </tr>
           </tbody>
         </table>
-        {/*
-        <div className="App-content">
-          <p>出品者：{user}</p>
-          <p>本の画像：{pic}</p>
-          <p>本の名前：{book}</p>
-          <p>受取場所：{place}</p>
-          <p>科目タグ：{tag}</p>
-          <p>本の説明：{explain}</p>
-        </div>
-  */}
+
+        <p>あなたの名前を入力してください</p>
+        <input type="text" class="textbox"></input>
       </div>
       <button className="btn_02" type="button" onClick={DecideDate}>
         日時を決める

@@ -1,39 +1,75 @@
 //出品画面
 
-// import "./styles.css";
+import "./App.css";
+import { v4 as uuidv4 } from "uuid";
 
-export default function App() {
+const uniqueId = uuidv4();
+console.log("A unique ID:", uniqueId);
+
+function CreateID() {}
+
+export default function ExhibitBook() {
   return (
-    <div className="App">
-      <h2>教科書を出品する</h2>
-
-      <div class="name">
-        <h2>名前</h2>
-        <input type="text" />
+    <div>
+      <div className="App-ContentTitle">
+        <div>本を出品する</div>
       </div>
-      <h2>写真</h2>
-      <img
-        src="https://m.media-amazon.com/images/I/31pu-L3RKEL._SY445_SX342_.jpg"
-        alt="教科書の写真"
-      />
 
-      <input type="file" name="sample" accept="image/jpeg, image/png" />
+      <table class="form-table">
+        <tbody>
+          <tr>
+            <th>名前</th>
+            <td>
+              <input type="text" />
+            </td>
+          </tr>
 
-      <h2>場所</h2>
-      <ul>
-        <li>食堂前</li>
-        <li>体育館入り口</li>
-        <li>研究棟</li>
-      </ul>
-      <div class="subject">
-        <h2>科目タグ</h2>
-        <input type="text" />
-      </div>
-      <h2>本文</h2>
-      <div class="main">
-        <input type="text" />
-        <button>出品する</button>
-      </div>
+          <tr>
+            <th>本の写真</th>
+            <td>
+              <input type="file" name="sample" accept="image/jpeg, image/png" />
+            </td>
+          </tr>
+
+          <tr>
+            <th>場所</th>
+            <td>
+              <ul>
+                <li>
+                  <input id="" type="checkbox" />
+                  <label class="check-place">食堂前</label>
+                </li>
+                <li>
+                  <input id="" type="checkbox" />
+                  <label class="check-place">体育館入り口</label>
+                </li>
+                <li>
+                  <input id="" type="checkbox" />
+                  <label class="check-place">研究棟</label>
+                </li>
+              </ul>
+            </td>
+          </tr>
+
+          <tr>
+            <th>科目タグ</th>
+            <td>
+              <input type="text" />
+            </td>
+          </tr>
+
+          <tr>
+            <th>本文</th>
+            <td>
+              <input class="main-sentence" type="text" />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <button className="btn_02" type="button">
+        出品する
+      </button>
     </div>
   );
 }

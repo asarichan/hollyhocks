@@ -1,13 +1,14 @@
-import "./styles.css";
+import "./App.css";
 
 export default function App() {
   return (
-    <div className="App">
-      <div class="hold">
-        <h1>取引が成立しました。</h1>
-        <h2>日時</h2>
-        <h2>場所</h2>
-        <h2>名前</h2>
+    <div>
+      <div class="App-ContentTitle">取引が成立しました</div>
+
+      <div class="App-confirm">
+        <p>日時</p>
+        <p>場所</p>
+        <p>名前</p>
       </div>
     </div>
   );

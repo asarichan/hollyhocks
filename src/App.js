@@ -4,6 +4,8 @@ import Home from "./Home";
 import ExhibitBook from "./ExhibitBook";
 import ReceiveBook from "./ReceiveBook";
 import DecideData from "./DecideDate";
+import Hold from "./hold";
+import Search from "./SearchBook";
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
         <Route path="exhibit" element={<ExhibitBook />} />
         <Route path="receive" element={<ReceiveBook />} />
         <Route path="add" element={<DecideData />} />
+        <Route path="search" element={<Search />} />
+        <Route path="hold" element={<Hold />} />
       </Routes>
     </div>
   );

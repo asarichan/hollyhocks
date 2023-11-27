@@ -1,6 +1,6 @@
 //検索画面
 
-import "./styles.css";
+import "./App.css";
 import React, { useState } from "react";
 export default function App() {
   const [searchResult, setSearchResult] = useState(null);

@@ -48,6 +48,22 @@
   color: black;
 }
 
+.App-confirm {
+  margin: 10px;
+  padding: 1px;
+  text-align: center;
+  align-items: center;
+}
+
+.check-place {
+  margin-left: 5px;
+}
+
+.main-sentence {
+  height: 300px;
+  overflow: auto;
+}
+
 h1 {
   color: white;
   font-size: 48px;
@@ -170,4 +186,16 @@ textarea::placeholder {
   position: relative;
   text-align: left;
   width: 300px;
+}
+
+.textbox {
+  width: 200px;
+  padding: 3px 7px;
+  margin: 10px;
+  border-radius: 5px;
+  border: 2px solid #0e0505;
+}
+.textbox:focus {
+  outline: 0;
+  border: 2px solid #2196f3;
 }
