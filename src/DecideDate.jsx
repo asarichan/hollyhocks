@@ -62,7 +62,7 @@ export default function DecideRecieve() {
         <p>＜取引内容確認＞</p>
       </div>
 
-      <table class="form-table">
+      <table className="form-table">
         <tbody>
           <tr>
             <th>氏名</th>
@@ -86,22 +86,21 @@ export default function DecideRecieve() {
         </tbody>
       </table>
 
-      <p>
-        <div>
-          <div className="h1-black">
-            <label htmlFor="dateInput">日付を選択してください</label>
-          </div>
-          {year}年{month}月{begin}日～{year}年{month}月{end}まで有効です
-          <div className="h1-black">
-            <p>
-              <input type="date" id="dateInput" />
-            </p>
-          </div>
-          <button className="btn_02" type="button" onClick={handleButtonClick}>
-            取引を確定する
-          </button>
+      {/* <p>要素の中に<p>は入れ子にできないので消しました。見た目が少し変わってしまったので調整お願いします */}
+      <div>
+        <div className="h1-black">
+          <label htmlFor="dateInput">日付を選択してください</label>
         </div>
-      </p>
+        {year}年{month}月{begin}日～{year}年{month}月{end}まで有効です
+        <div className="h1-black">
+          <p>
+            <input type="date" id="dateInput" />
+          </p>
+        </div>
+        <button className="btn_02" type="button" onClick={handleButtonClick}>
+          取引を確定する
+        </button>
+      </div>
     </div>
   );
 }

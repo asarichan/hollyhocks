@@ -25,7 +25,7 @@ function Home() {
 
         <p>もらわれたか確認する</p>
 
-        <Link to="add" clasName="text">
+        <Link to="add" className="text">
           <p>画面確認用</p>
         </Link>
       </main>

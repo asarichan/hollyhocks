@@ -15,7 +15,7 @@ export default function ExhibitBook() {
         <div>本を出品する</div>
       </div>
 
-      <table class="form-table">
+      <table className="form-table">
         <tbody>
           <tr>
             <th>名前</th>
@@ -37,15 +37,15 @@ export default function ExhibitBook() {
               <ul>
                 <li>
                   <input id="" type="checkbox" />
-                  <label class="check-place">食堂前</label>
+                  <label className="check-place">食堂前</label>
                 </li>
                 <li>
                   <input id="" type="checkbox" />
-                  <label class="check-place">体育館入り口</label>
+                  <label className="check-place">体育館入り口</label>
                 </li>
                 <li>
                   <input id="" type="checkbox" />
-                  <label class="check-place">研究棟</label>
+                  <label className="check-place">研究棟</label>
                 </li>
               </ul>
             </td>
@@ -61,7 +61,7 @@ export default function ExhibitBook() {
           <tr>
             <th>本文</th>
             <td>
-              <input class="main-sentence" type="text" />
+              <input className="main-sentence" type="text" />
             </td>
           </tr>
         </tbody>

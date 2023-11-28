@@ -23,7 +23,7 @@ export default function ReceiveBook() {
           </div>
         </div>
 
-        <table class="form-table">
+        <table className="form-table">
           <tbody>
             <tr>
               <th>氏名</th>
@@ -58,7 +58,7 @@ export default function ReceiveBook() {
         </table>
 
         <p>あなたの名前を入力してください</p>
-        <input type="text" class="textbox"></input>
+        <input type="text" className="textbox"></input>
       </div>
       <button className="btn_02" type="button" onClick={DecideDate}>
         日時を決める
