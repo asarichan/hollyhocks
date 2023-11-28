@@ -1,6 +1,7 @@
 //出品画面
 
-import "./App.css";
+import "../App.css";
+import { useNavigate } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 
 const uniqueId = uuidv4();
@@ -9,6 +10,14 @@ console.log("A unique ID:", uniqueId);
 function CreateID() {}
 
 export default function ExhibitBook() {
+  const navigate = useNavigate();
+
+  const DecideDate = () => {
+    if (window.confirm("この内容で出品しますか？")) {
+      navigate("/exhibit/complete"); // リダイレクト先のパスを指定
+    }
+  };
+
   return (
     <div>
       <div className="App-ContentTitle">
@@ -67,7 +76,7 @@ export default function ExhibitBook() {
         </tbody>
       </table>
 
-      <button className="btn_02" type="button">
+      <button className="btn_02" type="button" onClick={DecideDate}>
         出品する
       </button>
     </div>

@@ -1,5 +1,6 @@
-import "./App.css";
-import "./App.js";
+import "../App.css";
+import "../App.js";
+import { useNavigate } from "react-router-dom";
 
 const user = "東日本";
 const pic = "写真";
@@ -8,12 +9,15 @@ const place = "体育館入り口";
 const tag = "JAVA";
 const explain = "この本でJAVAの全てが理解できます";
 
-function DecideDate() {
-  if (window.confirm("日付を決めますか？")) {
-  }
-}
-
 export default function ReceiveBook() {
+  const navigate = useNavigate();
+
+  const DecideDate = () => {
+    if (window.confirm("日付を決めますか？")) {
+      navigate("/receive/decide"); // リダイレクト先のパスを指定
+    }
+  };
+
   return (
     <div>
       <div>

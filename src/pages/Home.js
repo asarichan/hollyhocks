@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "./App.css";
+import "../App.css";
 
 function Home() {
   return (
@@ -25,7 +25,7 @@ function Home() {
 
         <p>もらわれたか確認する</p>
 
-        <Link to="add" className="text">
+        <Link to="receive/decide" className="text">
           <p>画面確認用</p>
         </Link>
       </main>

@@ -1,4 +1,5 @@
-import "./App.css";
+import "../../App.css";
+import { useNavigate } from "react-router-dom";
 
 const user = "東日本";
 const book = "独習Java 新版";
@@ -19,15 +20,19 @@ month = today.getMonth() + 1;
 begin = today.getDate();
 end = today.getDate() + 7;
 
-function ConfirmTransaction() {
-  if (window.confirm("取引を確定させますか？")) {
-    document.write("取引が成立しましたページに飛ぶ");
-  } else {
-    return;
-  }
-}
 
 export default function DecideRecieve() {
+  const navigate = useNavigate();
+
+  const ConfirmTransaction = () => {
+    if (window.confirm("取引を確定させますか？")) {
+      // document.write("取引が成立しましたページに飛ぶ");
+      navigate("/receive/complete");
+    } else {
+      return;
+    }
+  };
+
   const handleButtonClick = () => {
     const inputDate = document.getElementById("dateInput").value;
     const currentDate = new Date(inputDate);

@@ -1,9 +1,11 @@
 import "./App.css";
 import { Routes, Route, Link } from "react-router-dom";
-import Home from "./Home";
-import ExhibitBook from "./ExhibitBook";
-import ReceiveBook from "./ReceiveBook";
-import DecideData from "./DecideDate";
+import Home from "./pages/Home";
+import ExhibitBook from "./pages/ExhibitBook";
+import ReceiveBook from "./pages/ReceiveBook";
+import DecideData from "./pages/receive/DecideDate";
+import CompleteBook from "./pages/receive/CompleteBook";
+import Complete from "./pages/exhibit/Complete";
 import Hold from "./hold";
 import Search from "./SearchBook";
 
@@ -14,7 +16,10 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="exhibit" element={<ExhibitBook />} />
         <Route path="receive" element={<ReceiveBook />} />
-        <Route path="add" element={<DecideData />} />
+        <Route path="receive/decide" element={<DecideData />} />
+        <Route path="receive/complete" element={<CompleteBook />} />
+        <Route path="exhibit/complete" element={<Complete />} />
+
         <Route path="search" element={<Search />} />
         <Route path="hold" element={<Hold />} />
       </Routes>
