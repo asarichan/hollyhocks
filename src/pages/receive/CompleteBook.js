@@ -3,11 +3,16 @@ import { Link } from "react-router-dom";
 
 export default function App() {
   return (
-    <div className="App-content">
-      <div className="ua">
+    <div>
+      <div className="App-ContentTitle">
         <p>取引が成立しました</p>
-        <Link to="/">元のページに戻る</Link>
       </div>
+      <div className="App-confirm">
+        <p>日時</p>
+        <p>場所</p>
+        <p>名前</p>
+      </div>
+      <Link to="/">元のページに戻る</Link>
     </div>
   );
 }

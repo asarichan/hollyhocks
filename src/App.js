@@ -6,7 +6,7 @@ import ReceiveBook from "./pages/ReceiveBook";
 import DecideData from "./pages/receive/DecideDate";
 import CompleteBook from "./pages/receive/CompleteBook";
 import Complete from "./pages/exhibit/Complete";
-import Hold from "./hold";
+
 import Search from "./SearchBook";
 
 function App() {
@@ -21,7 +21,6 @@ function App() {
         <Route path="exhibit/complete" element={<Complete />} />
 
         <Route path="search" element={<Search />} />
-        <Route path="hold" element={<Hold />} />
       </Routes>
     </div>
   );
