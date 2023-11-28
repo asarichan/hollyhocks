@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 function Complete() {
   return (
     <div>
-      <header>
-        <p>出品しました</p>
+      <div>
+        <div className="App-ContentTitle">出品しました</div>
         <Link to="/">
           <p>ホームに戻る</p>
         </Link>
-      </header>
+      </div>
     </div>
   );
 }

@@ -12,7 +12,7 @@ export default function App() {
         <p>場所</p>
         <p>名前</p>
       </div>
-      <Link to="/">元のページに戻る</Link>
+      <Link to="/">ホームに戻る</Link>
     </div>
   );
 }

@@ -23,10 +23,8 @@ function Home() {
           <p>先輩からもらう</p>
         </Link>
 
-        <p>もらわれたか確認する</p>
-
         <Link to="search" className="text">
-          <p>画面確認用</p>
+          <p>もらわれたか確認する</p>
         </Link>
       </main>
     </div>
