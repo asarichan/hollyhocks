@@ -131,7 +131,7 @@ export default function ExhibitBook() {
           </tbody>
         </table>
 
-        <button className="btn_02" type="submit" onclick={buttonClick}>
+        <button className="btn_02" type="submit" onClick={buttonClick}>
           出品する
         </button>
       </form>
