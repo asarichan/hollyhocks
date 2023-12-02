@@ -2,6 +2,10 @@ import "../App.css";
 import "../App.js";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { setName } from "../Action";
+import { setDate } from "../Action";
 
 const user = "東日本";
 const pic = "写真";
@@ -23,7 +27,29 @@ endmonth = twoWeekLater.getMonth() + 1;
 end = twoWeekLater.getDate();
 
 export default function ReceiveBook() {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
+
+  const [inputValue, setInputValue] = useState({
+    name: "",
+    date: "",
+  }); // フォームの入力値を保持するステート
+
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setInputValue({
+      ...inputValue,
+      [name]: value,
+    }); // 入力値を更新
+  };
+
+  const handleDateChange = (event) => {
+    const { name, value } = event.target;
+    setInputValue({
+      ...inputValue,
+      [name]: value,
+    });
+  };
 
   const BackPage = () => {
     if (
@@ -55,6 +81,8 @@ export default function ReceiveBook() {
       alert("正しい日付を選択してください！");
     } else {
       if (window.confirm("この日付で取引を確定しますか?")) {
+        dispatch(setName(inputValue.name));
+        dispatch(setDate(inputValue.date));
         navigate("/receive/complete");
       } else {
         alert("もう一度決めなおしてください");
@@ -114,6 +142,8 @@ export default function ReceiveBook() {
           type="text"
           name="name"
           {...register("name", { required: true })}
+          value={inputValue.name}
+          onChange={handleInputChange}
         />
         {errors.name && <span>※名前を入力してください</span>}
 
@@ -126,7 +156,13 @@ export default function ReceiveBook() {
           日まで有効です
           <div className="h1-black">
             <p>
-              <input type="date" id="dateInput" />
+              <input
+                type="date"
+                id="dateInput"
+                name="date"
+                value={inputValue.date}
+                onChange={handleDateChange}
+              />
             </p>
           </div>
           <button className="btn_02" type="submit">
