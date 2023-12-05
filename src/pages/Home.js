@@ -19,12 +19,8 @@ function Home() {
           <p>欲しい学生にあげる</p>
         </Link>
 
-        <Link to="receive" className="text">
-          <p>先輩からもらう</p>
-        </Link>
-
         <Link to="search" className="text">
-          <p>もらわれたか確認する</p>
+          <p>先輩からもらう</p>
         </Link>
       </main>
     </div>

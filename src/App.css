@@ -70,9 +70,9 @@
   margin-left: 5px;
 }
 
-.main-sentence {
+textarea.main-sentence {
   height: 300px;
-  overflow: auto;
+  width: 500px;
 }
 
 h1 {
@@ -106,6 +106,30 @@ button.Home {
 
 button.Home:hover {
   color: #25b7c0;
+  transition: 0.1s;
+}
+
+.tag-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.tag-elements {
+  margin-top: 3px;
+}
+
+button.tag {
+  margin-left: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 100vh;
+  color: black;
+  background-color: rgb(222, 222, 222);
+}
+
+button.tag:hover {
+  background-color: #25b7c0;
   transition: 0.1s;
 }
 
@@ -148,7 +172,7 @@ button {
 }
 
 input[type="text"],
-textarea {
+.textarea {
   background: #f8f8f8;
   display: block;
   font-size: 16px;
@@ -220,4 +244,39 @@ textarea::placeholder {
 .textbox:focus {
   outline: 0;
   border: 2px solid #2196f3;
+}
+
+.in h2 {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: 45px;
+}
+.in p {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: 75px;
+}
+.search-list {
+  width: 930px;
+  max-width: 90%;
+  margin-top: 45px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 60px;
+  /* grid */
+  display: grid;
+  /* 列の数と幅の指定 */
+  grid-template-columns: repeat(auto-fit, 240px);
+  /* 列・行の間隔 */
+  column-gap: 95px;
+  row-gap: 70px;
+  justify-content: center;
+}
+.search-item img {
+  width: 60%;
+}
+.search-item {
+  font-size: 20px;
 }

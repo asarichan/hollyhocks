@@ -27,6 +27,7 @@ endmonth = twoWeekLater.getMonth() + 1;
 end = twoWeekLater.getDate();
 
 export default function ReceiveBook() {
+  const message = `受取日時\n${beginyear}年${beginmonth}月${begin}日～${endyear}年${endmonth}月${end}日まで有効です\n`;
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -102,6 +103,7 @@ export default function ReceiveBook() {
         戻る
       </button>
 
+      <p className="h1-black">出品情報の確認</p>
       <table className="form-table">
         <tbody>
           <tr>
@@ -136,39 +138,43 @@ export default function ReceiveBook() {
         </tbody>
       </table>
 
+      <p className="h1-black">受取者の情報を記入してください</p>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <p>あなたの名前を入力してください</p>
-        <input
-          type="text"
-          name="name"
-          {...register("name", { required: true })}
-          value={inputValue.name}
-          onChange={handleInputChange}
-        />
-        {errors.name && <span>※名前を入力してください</span>}
+        <table className="form-table">
+          <tbody>
+            <tr>
+              <th>名前</th>
+              <td>
+                <input
+                  type="text"
+                  name="name"
+                  {...register("name", { required: true })}
+                  value={inputValue.name}
+                  onChange={handleInputChange}
+                />
+                {errors.name && <span>※名前を入力してください</span>}
+              </td>
+            </tr>
 
-        {/* <p>要素の中に<p>は入れ子にできないので消しました。見た目が少し変わってしまったので調整お願いします */}
-        <div>
-          <div className="h1-black">
-            <label htmlFor="dateInput">受け取る日付を選択してください</label>
-          </div>
-          {beginyear}年{beginmonth}月{begin}日～{endyear}年{endmonth}月{end}
-          日まで有効です
-          <div className="h1-black">
-            <p>
-              <input
-                type="date"
-                id="dateInput"
-                name="date"
-                value={inputValue.date}
-                onChange={handleDateChange}
-              />
-            </p>
-          </div>
-          <button className="btn_02" type="submit">
-            取引を確定する
-          </button>
-        </div>
+            <tr>
+              <th>
+                <label htmlFor="dateInput">{message}</label>
+              </th>
+              <td>
+                <input
+                  type="date"
+                  id="dateInput"
+                  name="date"
+                  value={inputValue.date}
+                  onChange={handleDateChange}
+                />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <button className="btn_02" type="submit">
+          取引を確定する
+        </button>
       </form>
     </div>
   );

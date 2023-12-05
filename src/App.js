@@ -5,7 +5,7 @@ import ExhibitBook from "./pages/ExhibitBook";
 import ReceiveBook from "./pages/ReceiveBook";
 import CompleteBook from "./pages/receive/CompleteBook";
 import Complete from "./pages/exhibit/Complete";
-
+import Example from "./Example";
 import Search from "./pages/SearchBook";
 
 function App() {
@@ -13,12 +13,13 @@ function App() {
     <div>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="search" element={<Search />} />
         <Route path="exhibit" element={<ExhibitBook />} />
-        <Route path="receive" element={<ReceiveBook />} />
+        <Route path="search/receive" element={<ReceiveBook />} />
         <Route path="receive/complete" element={<CompleteBook />} />
         <Route path="exhibit/complete" element={<Complete />} />
 
-        <Route path="search" element={<Search />} />
+        <Route path="example" element={<Example />} />
       </Routes>
     </div>
   );
