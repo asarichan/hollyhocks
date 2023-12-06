@@ -8,7 +8,6 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { exhibitSetName } from "../Action";
 import { exhibitSetBookName } from "../Action";
-import { toggleCheckbox } from "../Action";
 
 export default function ExhibitBook() {
   const dispatch = useDispatch();
@@ -125,7 +124,7 @@ export default function ExhibitBook() {
     optionsToShow = ProgrammingOptions;
   } else if (selectedGenre === "ComputerScienceOptions") {
     optionsToShow = ComputerScienceOptions;
-  } else if (selectedGenre === "ComputerNetworkOption") {
+  } else if (selectedGenre === "ComputerNetworkOptions") {
     optionsToShow = ComputerNetworkOptions;
   }
 
@@ -143,7 +142,9 @@ export default function ExhibitBook() {
         <table className="form-table">
           <tbody>
             <tr>
-              <th>名前 (必須)</th>
+              <th>
+                名前 <span className="require">(必須)</span>
+              </th>
               <td>
                 <input
                   type="text"
@@ -152,7 +153,9 @@ export default function ExhibitBook() {
                   value={inputValue.name}
                   onChange={handleInputChange}
                 />
-                {errors.name && <span>※名前を入力してください</span>}
+                {errors.name && (
+                  <span className="require">※名前を入力してください</span>
+                )}
               </td>
             </tr>
 
@@ -168,7 +171,9 @@ export default function ExhibitBook() {
             </tr>
 
             <tr>
-              <th>書籍名 (必須)</th>
+              <th>
+                書籍名 <span className="require">(必須)</span>
+              </th>
               <td>
                 <input
                   type="text"
@@ -177,12 +182,16 @@ export default function ExhibitBook() {
                   value={inputValue.bookname}
                   onChange={handleBookNameChange}
                 />
-                {errors.bookname && <span>※教科書名を入力してください</span>}
+                {errors.bookname && (
+                  <span className="require">※教科書名を入力してください</span>
+                )}
               </td>
             </tr>
 
             <tr>
-              <th>場所 (必須)</th>
+              <th>
+                場所 <span className="require">(必須)</span>
+              </th>
               <td>
                 <ul>
                   <li>
@@ -202,7 +211,9 @@ export default function ExhibitBook() {
             </tr>
 
             <tr>
-              <th>科目タグ (必須)</th>
+              <th>
+                科目タグ <span className="require">(必須)</span>
+              </th>
               <td>
                 {/*
                 <input

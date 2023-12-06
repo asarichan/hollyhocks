@@ -8,10 +8,10 @@ import { setName } from "../Action";
 import { setDate } from "../Action";
 
 const user = "東日本";
-const pic = "写真";
-const book = "独習Java 新版";
+const pic = "https://m.media-amazon.com/images/I/71HaWNbej9L._SL1304_.jpg";
+const book = "新版　Java";
 const place = "体育館入り口";
-const tag = "JAVA";
+const tag = "プログラミングJAVA I";
 const explain = "この本でJAVAの全てが理解できます";
 
 let today, beginyear, beginmonth, begin, twoWeekLater, endyear, endmonth, end;
@@ -56,7 +56,7 @@ export default function ReceiveBook() {
     if (
       window.confirm("前のページに戻りますか？記入されたデータは消去されます")
     ) {
-      navigate("/"); //前のページのパス(検索画面)
+      navigate("/search"); //前のページのパス(検索画面)
     }
   };
 
@@ -100,7 +100,7 @@ export default function ReceiveBook() {
       </div>
 
       <button className="Home" type="button" onClick={BackPage}>
-        戻る
+        ←戻る
       </button>
 
       <p className="h1-black">出品情報の確認</p>
@@ -113,7 +113,10 @@ export default function ReceiveBook() {
 
           <tr>
             <th>本の写真</th>
-            <td>{pic}</td>
+            <td className="sample">
+              {" "}
+              <img src={pic} />
+            </td>
           </tr>
 
           <tr>
@@ -143,7 +146,9 @@ export default function ReceiveBook() {
         <table className="form-table">
           <tbody>
             <tr>
-              <th>名前</th>
+              <th>
+                名前 <span className="require">(必須)</span>
+              </th>
               <td>
                 <input
                   type="text"
@@ -152,13 +157,16 @@ export default function ReceiveBook() {
                   value={inputValue.name}
                   onChange={handleInputChange}
                 />
-                {errors.name && <span>※名前を入力してください</span>}
+                {errors.name && (
+                  <span className="require">※名前を入力してください</span>
+                )}
               </td>
             </tr>
 
             <tr>
               <th>
                 <label htmlFor="dateInput">{message}</label>
+                <span className="require">(必須)</span>
               </th>
               <td>
                 <input

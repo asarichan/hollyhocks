@@ -86,6 +86,22 @@ h1 {
   font-size: 24px;
   font-weight: bold;
 }
+.h1-black-sub {
+  color: #e26200;
+  font-weight: normal;
+}
+
+.home {
+  text-align: center;
+  margin-top: 78px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #21585b;
+}
+.home:hover {
+  color: #25b7c0;
+  transition: 0.1s;
+}
 
 p {
   line-height: 60px;
@@ -101,7 +117,8 @@ a {
 
 button.Home {
   margin: 10px;
-  color: black;
+  color: #21585b;
+  font-weight: bold;
 }
 
 button.Home:hover {
@@ -279,4 +296,17 @@ textarea::placeholder {
 }
 .search-item {
   font-size: 20px;
+}
+
+.sample img {
+  width: 150px;
+  height: auto;
+}
+
+.require {
+  color: red;
+}
+.text:hover {
+  color: #c4e7ea;
+  transition: 0.1s;
 }

@@ -17,13 +17,23 @@ export default function App() {
 
       <div className="App-confirm">
         <p className="h1-black">＜購入情報＞</p>
-        <p className="h1-black">あなたの名前：{name}</p>
-        <p className="h1-black">本のタイトル：{dummyData.title}</p>
-        <p className="h1-black">日時：{date}</p>
-        <p className="h1-black">場所：{dummyData.place}</p>
+        <p className="h1-black">
+          あなたの名前：<span className="h1-black-sub">{name}</span>
+        </p>
+        <p className="h1-black">
+          本のタイトル：<span className="h1-black-sub">{dummyData.title}</span>
+        </p>
+        <p className="h1-black">
+          日時：<span className="h1-black-sub">{date}</span>
+        </p>
+        <p className="h1-black">
+          場所：<span className="h1-black-sub">{dummyData.place}</span>
+        </p>
       </div>
       <div>
-        <Link to="/">ホームに戻る</Link>
+        <Link to="/">
+          <p className="home">ホームに戻る</p>
+        </Link>
       </div>
     </div>
   );
